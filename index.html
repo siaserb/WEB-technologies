@@ -4,89 +4,234 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="webfonts/all.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/6f95f7fb49.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <title>montrack main page</title>
+    <title>Montrack main page</title>
 </head>
 <body>
     <aside>
         
         <nav>
             <ul class="categories">
-                <li><span class="fa-light fa-building-columns">montrack</span></li>
+                <li><span>Montrack</span></li>
                 <li class="banking">
-                    <label for="touch"><span class="list-span">Banking</span></label>               
-                    <input type="checkbox" id="touch"> 
+                    <label for="touch-aside"><span class="list-span"><i class="fa-solid fa-building-columns" style="color: #ffffff;"></i>Banking</span></label>               
+                    <input type="checkbox" id="touch-aside"> 
 
                     <ul class="slide">
-                        <li><a href="#"><span>Cards</span></a></li> 
-                        <li><a href="#"><span>Payments</span></a></li>
-                        <li><a href="#"><span>Statistics</span></a></li>
+                        <li><a href="#"><span><i class="fa-regular fa-credit-card" style="color: #ffffff;"></i>Cards</span></a></li> 
+                        <li><a href="#"><span><i class="fa-solid fa-bars" style="color: #ffffff;"></i>Payments</span></a></li>
+                        <li><a href="#"><span><i class="fa-solid fa-chart-pie" style="color: #ffffff;"></i>Statistics</span></a></li>
                         
                     </ul>
                 </li>
-                <li><a href="#"><span>Investments</span></a></li>
-                <li><a href="#"><span>Services</span></a></li>
-                <li><a href="#"><span>Settings</span></a></li>
+                <li><a href="#"><span><i class="fa-solid fa-chart-line" style="color: #ffffff;"></i>Investments</span></a></li>
+                <li><a href="#"><span><i class="fa-solid fa-table-cells-large" style="color: #ffffff;"></i>Services</span></a></li>
+                <li><a href="#"><span><i class="fa-solid fa-sliders" style="color: #ffffff;"></i>Settings</span></a></li>
             </ul>
         </nav>
     </aside>
 
     <main>
         <section class = "block section1">
-            <ul>
-                <li>Debit cards
-                    <ul></ul>
+            <ul class="main-slide">
+                <li>
+                    <label for="touch1-1"><span class="list1">Debit cards</span></label>               
+                    <input type="checkbox" id="touch1-1"> 
+
+                    <ul class="slide">
+                        <li><a href="#">Card1</a></li> 
+                        <li><a href="#">Card2</a></li>
+                        <li><a href="#">Card3</a></li>
+                        <li><a href="#">Card1</a></li>
+                        <li><a href="#">Card1</a></li>
+                    </ul>
                 </li>
-                <li>Credit cards
-                    <ul></ul>
+                <li>
+                    <label for="touch1-2"><span class="list1">Credit cards</span></label>               
+                    <input type="checkbox" id="touch1-2"> 
+
+                    <ul class="slide">
+                        <li>
+                            <div id="Name" class="sub-item">Name</div>
+                            <div id="Amount" class="sub-item">Amount</div>
+                            <div id="Image" class="sub-item">Image</div>
+                        </li> 
+                        <li><a href="#">Card2</a></li>
+                        <li><a href="#">Card3</a></li>
+                        
+                    </ul>
                 </li>
-                <li>Children cards
-                    <ul></ul>
+                <li>
+                    <label for="touch1-3"><span class="list1">Children cards</span></label>               
+                    <input type="checkbox" id="touch1-3"> 
+
+                    <ul class="slide">
+                        <li><a href="#">Card1</a></li> 
+                        <li><a href="#">Card2</a></li>
+                        <li><a href="#">Card3</a></li>
+                        
+                    </ul>
                 </li>
-                <li>Children cards
-                    <ul></ul>
+                <li>
+                    <label for="touch1-4"><span class="list1">Archive cards</span></label>               
+                    <input type="checkbox" id="touch1-4"> 
+
+                    <ul class="slide">
+                        <li><a href="#">Card1</a></li> 
+                        <li><a href="#">Card2</a></li>
+                        <li><a href="#">Card3</a></li>
+                        
+                    </ul>
                 </li>
             </ul>
             
-            <div class="container">
-                <div class="buttons">
-                  <a href="#" class="button">add new card</a>
-                  
-                </div>
-            </div>
-        </section>
-        <section class = "block section2">2</section>
-        <section class = "block section3">
-            <section class = "block section3_1">3_1</section>
-            <section class = "block section3_2">3_2</section>
-        </section>
-        <section class = "block section4">
-            <table>
-                <thread>    
-                    <tr>
-                        <th>Transacrion</th>
-                        <th>Sort by:<ul><li>date</li><li>amount</li></ul></th>
-                    </tr>
-                </thread>
 
+            <button class="button">add new card</button>
+
+        </section>
+
+        <section class = "block section2">
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card__front">
+                  <div class="card__logo">BANK</div>
+                  <div class="card__number" ondblclick="toggleCardNumber(this)">**** **** **** 3456</div>
+                  <div class="card__name">JOHN DOE</div>
+                  <div class="card__expiry">12/25</div>
+                </div>
+                <div class="card__back">
+                  <div class="card__cvv">123</div>
+                </div>
+              </div>
+              
+              <script>
+                function toggleCard(element) {
+                  element.classList.toggle("is-flipped");
+                }
+              
+                function toggleCardNumber(element) {
+                  if (element.textContent === "**** **** **** 3456") {
+                    element.textContent = "1234 5678 9012 3456";
+                  } else {
+                    element.textContent = "**** **** **** 3456";
+                  }
+                }
+              </script>
+
+        </section>
+        <section class = "block section3">
+            <section class = "block section3_1"></section>
+            <section class = "block section3_2"></section>
+        </section>
+        <hr>
+        <section class = "block section4">
+            <div id="title-of-table">Transactions</div>
+            <div id="sort">
+            <label for="sort-select">Sort by:</label>
+            <select id="sort-select">
+              <option value="date-asc">Date (ascending)</option>
+              <option value="date-desc">Date (descending)</option>
+              <option value="sum-asc">Sum (ascending)</option>
+              <option value="sum-desc">Sum (descending)</option>
+            </select>
+            </div>
+            <table>
+                <div id="transactions-body">
                 <tbody>
-                    <tr>
-                    <td>icon</td>
-                    <td>name</td>
-                    <td>date and time</td>
-                    <td>category</td>
-                    <td>summ</td>
-                    <td>status</td> 
-                    </tr>
-                </tbody>
+                <tr>
+                  <td>💳</td>
+                  <td>Amazon</td>
+                  <td>2022-11-01</td>
+                  <td>Shopping</td>
+                  <td>$100.00</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                  <td>💰</td>
+                  <td>PayPal</td>
+                  <td>2022-11-05</td>
+                  <td>Transfer</td>
+                  <td>$50.00</td>
+                  <td>Pending</td>
+                </tr>
+                <tr>
+                  <td>🍔</td>
+                  <td>Burger King</td>
+                  <td>2022-11-06</td>
+                  <td>Food</td>
+                  <td>$10.00</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                  <td>🚕</td>
+                  <td>Uber</td>
+                  <td>2022-11-07</td>
+                  <td>Transportation</td>
+                  <td>$15.00</td>
+                  <td>Completed</td>
+                </tr>
+                
+                <!-- Add more table rows with transaction data here -->
+              </tbody>
             </table>
+          </div>
+          
+          <script>
+            // Function to compare two rows by date in ascending order
+        function compareByDateAsc(rowA, rowB) {
+          const dateA = new Date(rowA.querySelector("td:nth-child(3)").textContent);
+          const dateB = new Date(rowB.querySelector("td:nth-child(3)").textContent);
+          return dateA - dateB;
+        }
+        
+        // Function to compare two rows by date in descending order
+        function compareByDateDesc(rowA, rowB) {
+          const dateA = new Date(rowA.querySelector("td:nth-child(3)").textContent);
+          const dateB = new Date(rowB.querySelector("td:nth-child(3)").textContent);
+          return dateB - dateA;
+        }
+        
+        // Function to compare two rows by sum in ascending order
+        function compareBySumAsc(rowA, rowB) {
+          const sumA = parseFloat(rowA.querySelector("td:nth-child(5)").textContent.slice(1));
+          const sumB = parseFloat(rowB.querySelector("td:nth-child(5)").textContent.slice(1));
+          return sumA - sumB;
+        }
+        
+        // Function to compare two rows by sum in descending order
+        function compareBySumDesc(rowA, rowB) {
+          const sumA = parseFloat(rowA.querySelector("td:nth-child(5)").textContent.slice(1));
+          const sumB = parseFloat(rowB.querySelector("td:nth-child(5)").textContent.slice(1));
+          return sumB - sumA;
+        }
+        
+        // Function to sort the table rows
+        function sortTable(compareFunction) {
+          const tbody = document.getElementById("transactions-body");
+          const rows = Array.from(tbody.querySelectorAll("tr"));
+          rows.sort(compareFunction);
+          rows.forEach(row => tbody.appendChild(row));
+        }
+        
+        // Add event listener to the sort select element
+        document.getElementById("sort-select").addEventListener("change", function() {
+          if (this.value === "date-asc") {
+            sortTable(compareByDateAsc);
+          } else if (this.value === "date-desc") {
+            sortTable(compareByDateDesc);
+          } else if (this.value === "sum-asc") {
+            sortTable(compareBySumAsc);
+          } else if (this.value === "sum-desc") {
+            sortTable(compareBySumDesc);
+          }
+        });
+          </script>
         </section>
     </main>
 </body>

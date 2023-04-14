@@ -10,27 +10,26 @@ li a {
     text-decoration: none;
     color: #000000;
   }
-  
-  
-nav {
-    width: 30%;
-  }
-
-
-/*a:link, a:visited, a:active {
-    color: rgb(71%, 71%, 71%);;
-    text-decoration: none;
-}
-
-a:hover {
-    color: white;
-    text-decoration: none;
-}*/
 
 html, body {
     width: 100%;
     height: 100%;
     margin: 0;
+}
+
+main{
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  top: auto;
+  left: 15%;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+nav {
+  width: 20%;
 }
 
 aside {
@@ -40,16 +39,9 @@ aside {
     position: absolute;
 }
 
-#montrack{
-  color: white;
-  padding: 30px;
-  font-size: 1.2em;
-  font-variant: small-caps;
-  position: absolute;
-  right: 50%;
-}
+/* List in aside */
 
-span {
+nav span {
     padding: 30px;
     background: #000000;
     color: white;
@@ -58,17 +50,6 @@ span {
     cursor: pointer;
     display: block;
   }
-
-main{
-    width: 85%;
-    height: 100%;
-    position: absolute;
-    top: auto;
-    left: 15%;
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
 
 .list-span::after {
     float: right;
@@ -89,15 +70,16 @@ main{
   
   .slide {
     clear: both;
-    
     height: 0px;
     overflow: hidden;
     transition: height .4s ease;
+  }
   
+  .main-slide::-webkit-scrollbar {
+    display: none;
   }
   
   ul.slide {
-    
     position: relative;
   }
   
@@ -105,18 +87,102 @@ main{
     padding: 0px;
   }
   
-  
-  
-  #touch {
+  #touch-aside {
     position: absolute;
     opacity: 0;
     height: 0px;
   }
   
-  #touch:checked + .slide {
+  #touch-aside:checked + .slide {
     height: 270px;
   }
 
+/* List in section1 */
+  #touch1-1 {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+  }
+  
+  #touch1-1:checked + .slide {
+    height: 270px;
+  }
+
+  #touch1-2 {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+  }
+  
+  #touch1-2:checked + .slide {
+    height: 270px;
+  }
+
+  #touch1-3 {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+  }
+  
+  #touch1-3:checked + .slide {
+    height: 270px;
+  }
+
+  #touch1-4 {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+  }
+  
+  #touch1-4:checked + .slide {
+    height: 270px;
+  }
+
+  .list1::after {
+    float: right;
+    content: "+";
+  }
+
+  .section1 span {
+    padding: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+    font-variant: small-caps;
+    cursor: pointer;
+    display: block;
+  }
+/* Start of modified */
+  .main-slide {
+    max-height: 90%;
+    overflow-y: auto;
+  }
+  .slide {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .slide li {
+    display: flex;
+    flex-basis: 100%;
+  }
+  
+  .sub-item {
+    flex-basis: calc(100% / 3);
+    text-align: center;
+  }
+  
+/* End of modified */
+#Name {
+  background-color: aqua;
+}
+
+#Amount {
+  background-color: rgb(182, 0, 100);
+}
+
+#Image {
+  background-color: rgb(135, 182, 47);
+}
 
 .section1{
     background-color: white;
@@ -127,7 +193,8 @@ main{
 .button {
     font-size: 1.2em;
     font-variant: small-caps;
-    background-color: #ffcc00;
+    background-color: #ffbe76;
+    border: 0;
     border-radius: 10px;
     padding: 10px 20px;
     color: black;
@@ -140,12 +207,91 @@ main{
     right: 80%;
   }
 
-.section2{
-    background-color: rgb(0, 0, 0);
-    color: white;
+  .section2 {
+    background-color: #000000;
     width: 70%;
     height: 40%;
-}
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .card {
+    width: 30%;
+    height: 20%;
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    border-radius: 15px;
+    color: white;
+    padding: 20px;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }
+
+  .card__front,
+  .card__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .card__front {
+    background: linear-gradient(to right, #f6e58d, #ffbe76);
+   }
+
+   .card__back {
+     background:#ffbe76;
+     transform:
+     rotateY(180deg);
+   }
+
+   .card__logo {
+     font-size:24px;
+     position:absolute;
+     top:20px;
+     left:20px;
+   }
+
+   .card__number {
+     font-size:20px;
+     letter-spacing:2px;
+     position:absolute;
+     top:45%;
+     left:20%;
+   }
+
+   .card__name,
+   .card__expiry {
+     font-size:16px;
+   }
+
+   .card__name {
+     position:absolute;
+     bottom:20px;
+     left:20px;
+   }
+
+   .card__expiry {
+     position:absolute;
+     bottom:40px;
+     left:20px;
+   }
+
+   .card__cvv {
+     font-size:24px;
+     position:absolute;
+     top:80%;
+     left:80%;
+     transform:translate(-50%,-50%);
+   }
 
 .section3{
     background-color:white ;
@@ -168,11 +314,42 @@ main{
     height: 100%;
 }
 
-
 .section4{
     background-color: white;
     width: 70%;
-    height: 30%;
+    height: 25%;
     margin-top: auto;
     margin-left: auto;
 }
+
+.transactions {
+  width: 100%;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  max-height: 50%;
+  overflow-y: auto;
+ }
+
+
+ 
+ #title-of-table{
+  width: 50%;
+  margin: 0;
+  position: relative;
+ }
+
+ th,
+ td {
+   padding:8px;
+   border-bottom:1px solid #ddd;
+ }
+
+ #sort {
+  position: relative;
+  left: 75%;
+  width: 20%;
+ }
